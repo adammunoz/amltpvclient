@@ -1,0 +1,12 @@
+2009-07-10 20:12:47:No se puede escribir setting
+2009-07-10 20:13:24:No se puede escribir setting
+2009-07-10 20:13:34:No se puede escribir setting
+2009-07-10 20:16:01:No hay setting persistent todavia
+2009-07-10 20:16:34:java.io.FileNotFoundException: settings\servidor.txt (El sistema no puede encontrar la ruta especificada)
+2009-07-10 20:22:48:No hay setting persistent todavia
+2009-07-10 23:27:38:Error grave con mesa 4
+2009-07-10 23:27:55:Error grave con mesa 4
+2009-07-10 23:28:03:Error grave con mesa 4
+2009-07-10 23:28:29:Error grave con mesa 4
+2009-07-10 23:30:18:Error grave con mesa 5
+2009-07-19 17:10:15:No se ha encontrado arbol de productos. Se creará uno.
