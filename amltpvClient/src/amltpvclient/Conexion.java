@@ -117,6 +117,11 @@ public class Conexion {
             AmltpvViewClient.changeMesasIcon(operand, new ImageIcon("imgs/mesaBusy.jpg"));
             return "done";
         }
+        else if (operation.equals("mesaLiberada")){
+            System.out.println("Decoded:mesa liberada");
+            AmltpvViewClient.changeMesasIcon(operand, new ImageIcon("imgs/mesa.jpg"));
+            return "done";
+        }
         else if (operation.equals("mesaServida")){
             System.out.println("Decoded:mesa servida");
             AmltpvViewClient.changeMesasIcon(operand, new ImageIcon("imgs/mesaBusyServida.jpg"));
