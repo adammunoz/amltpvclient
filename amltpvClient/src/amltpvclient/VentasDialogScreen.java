@@ -760,7 +760,11 @@ public class VentasDialogScreen extends javax.swing.JDialog {
 }//GEN-LAST:event_desOcuparButtonActionPerformed
 
     private void moverMesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moverMesaActionPerformed
-
+        MoverMesaDialog dialog = new MoverMesaDialog(null,true,
+                Integer.toString(currentMesa));
+        dialog.setLocationRelativeTo(null);
+        dialog.setVisible(true);
+        this.dispose();
 }//GEN-LAST:event_moverMesaActionPerformed
 
     private void atrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasButtonActionPerformed

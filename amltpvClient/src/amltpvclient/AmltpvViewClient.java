@@ -111,6 +111,10 @@ public class AmltpvViewClient extends FrameView {
     void pintarMesas(){
         int numMesas = Byte.parseByte(db.queryValor("numMesas"));
         System.out.println("NumMesas to be painted:"+numMesas);
+        numMesasArray = new String[numMesas];
+        for (int j=0;j<numMesas;j++){
+            numMesasArray[j] = Integer.toString(j+1);
+        }
         mesasArray = new JButton[numMesas+1];
         for (int i=1;i<=numMesas;i++){
            mesasArray[i] = new JButton(String.valueOf(i),new ImageIcon("imgs/mesa.jpg"));
@@ -290,6 +294,7 @@ public class AmltpvViewClient extends FrameView {
     static amltpv.ProductosModel productosModel;
     static Conexion conexion;
     static JButton[] mesasArray;
+    static String[] numMesasArray;
     static int remoteProcessing;
 }
 class ButtonHandler implements ActionListener{

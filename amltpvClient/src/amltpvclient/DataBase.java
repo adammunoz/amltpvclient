@@ -45,6 +45,18 @@ public class DataBase{
         }
     }
 
+    void moverMesaInPool(String source,String target){
+        String s = "";
+        s = "moverMesa@"+source+":"+target;
+        System.out.println(s);
+        try {
+            Conexion conexion = new Conexion(ConectarJDialog.servidor);
+            conexion.sendMsg(s);
+            String result = conexion.waitForMsgs(false);
+        } catch (IOException ex) {
+            Logger.getLogger(DataBase.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     void deleteFromMesasPool(String mesa, String producto) {
         int cant = queryCantOfProducto(mesa,producto);
