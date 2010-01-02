@@ -152,6 +152,10 @@ public class ConectarJDialog extends javax.swing.JDialog {
             servidorThread.start();
             ObjectClient objClient = new ObjectClient();
             AmltpvViewClient.persister.operator.updateSetting("servidor", servidor);
+            //PROFILE MEMORY OF SERVER
+            //while (true){
+            //    AmltpvViewClient.db.addProductoToMesasPool(Integer.toString(1), "Te Blanco",true);
+            //}
             doClose(RET_OK);
     }//GEN-LAST:event_okButtonActionPerformed
 
