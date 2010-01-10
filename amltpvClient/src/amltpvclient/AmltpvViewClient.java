@@ -185,6 +185,11 @@ public class AmltpvViewClient extends FrameView {
         exitMenuItem.setForeground(resourceMap.getColor("exitMenuItem.foreground")); // NOI18N
         exitMenuItem.setText(resourceMap.getString("exitMenuItem.text")); // NOI18N
         exitMenuItem.setName("exitMenuItem"); // NOI18N
+        exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitMenuItemActionPerformed(evt);
+            }
+        });
         fileMenu.add(exitMenuItem);
 
         menuBar.add(fileMenu);
@@ -269,6 +274,10 @@ public class AmltpvViewClient extends FrameView {
     private void cobradasMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cobradasMenuItemActionPerformed
         cobradasDialog.setVisible(true);
     }//GEN-LAST:event_cobradasMenuItemActionPerformed
+
+    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
+        persister.shutdown();
+    }//GEN-LAST:event_exitMenuItemActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem cobradasMenuItem;
