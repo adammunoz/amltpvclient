@@ -27,12 +27,13 @@ public class ObjectClient {
         ois = new ObjectInputStream(socket.getInputStream());
         // read an object from the server
         AmltpvViewClient.productosModel = (amltpv.ProductosModel) ois.readObject();
+        ProductosModel pm = AmltpvViewClient.productosModel;
         AmltpvViewClient.productosModel.activate();
         
         oos.close();
         ois.close();
       } catch(Exception e) {
-        System.out.println(e.getMessage());
+        System.out.println(e.toString());
       }
    }
 

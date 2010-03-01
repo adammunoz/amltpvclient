@@ -311,11 +311,10 @@ class ButtonHandler implements ActionListener{
         JButton sourceButton = (JButton) e.getSource();
         int numMesa = Integer.parseInt(sourceButton.getText());
         if (Conexion.mesasOcupadas.contains(Integer.toString(numMesa))){
-           JOptionPane.showMessageDialog(AmltpvViewClient.util.getMainFrame(),"Esta mesa esta siendo procesada en otra ordenador");
+           JOptionPane.showMessageDialog(AmltpvViewClient.util.getMainFrame(),"Esta mesa esta siendo procesada en otro ordenador" +
+                   ". Por favor no haga cambios");
         }
-        else{
-
-            try {
+        try {
                 Conexion conexion = new Conexion(ConectarJDialog.servidor);
                 conexion.sendMsg("mesaOcupada@"+numMesa);
                 conexion.waitForMsgs(false);
@@ -328,6 +327,5 @@ class ButtonHandler implements ActionListener{
             ventasScreen.setTitle("Mesa "+numMesa);
             ventasScreen.setLocationRelativeTo(AmltpvViewClient.util.getMainFrame());
             ventasScreen.setVisible(true);
-        }
-    }
+       }
 }

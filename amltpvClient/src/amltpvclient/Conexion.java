@@ -55,7 +55,7 @@ public class Conexion {
 
         String msg=null;
         while ((msg = in.readLine())!=null){
-            System.out.println("Answere received:"+msg);
+            System.out.println("Answer received:"+msg);
             if (decode){
                 return decode(msg);
             }

@@ -147,10 +147,9 @@ public class ConectarJDialog extends javax.swing.JDialog {
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
             servidor = servidorTextField.getText();
             amltpvView.pintarMesas();
-            AmltpvViewClient.util.persistSetting("servidor", servidor);
+            ObjectClient objClient = new ObjectClient();
             Thread servidorThread = new Thread(new ThreadNetworking());
             servidorThread.start();
-            ObjectClient objClient = new ObjectClient();
             AmltpvViewClient.persister.operator.updateSetting("servidor", servidor);
             //PROFILE MEMORY OF SERVER
             //while (true){
